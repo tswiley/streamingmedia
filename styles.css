@@ -177,8 +177,22 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     .more {
         float: right;
     }
-} 
 
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      #playlists {
+        flex-basis: 50%;
+      }
+      
+      #curated {
+        flex-basis: 50%;
+      }
+   
+    
+} 
 
 @media screen and (max-width:375px) {
 
@@ -197,6 +211,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     label span, input {
         display: none;
     }
+
 }
 
 #trending {
@@ -317,6 +332,8 @@ more {
 #curated ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
     background-color: #ffffff;
 }
+
+
 
 .more {
     background-color: #590242;
