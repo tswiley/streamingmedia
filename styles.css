@@ -54,7 +54,7 @@ html {
 
 body {
     margin: 0 auto;
-    width: 834px;
+    max-width: 834px;
 }
 
 header {
@@ -75,7 +75,7 @@ nav ul {
 #smoothjazz p {
     padding-top: 10px;
 }
-/* Hamburger menu styling */
+
 .hamburger {
   display: none;
 }
@@ -161,6 +161,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     body {
         background-color: #020659;
     }
+    
     ul {
         overflow: visible;
         position: absolute;
@@ -168,20 +169,23 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
+    
     label span, input {
         display: none;
     }
 
-    .more-trending-btn {
+    .more {
         float: right;
     }
 } 
+
 
 @media screen and (max-width:375px) {
 
     body {
         background-color: #020659;
     }
+    
     ul {
         overflow: visible;
         position: absolute;
@@ -189,6 +193,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
+    
     label span, input {
         display: none;
     }
@@ -313,7 +318,7 @@ more {
     background-color: #ffffff;
 }
 
-.more-trending-btn {
+.more {
     background-color: #590242;
     border: none;
     color: white;
