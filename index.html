@@ -9,34 +9,93 @@
 </head>
 
 <body>
+    <h1>MuzakMaker</h1>
 	<header>
-		<h1>Smooth Jazz</h1>
+        <input type="checkbox" id="hamburger-toggle" class="hamburger">
+        <label for="hamburger-toggle" class="hamburger-label">&#9776; Menu</label>
+
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Trending Songs</a></li>
-				<li><a href="#">Your Playlists</a></li>
-				<li><a href="#">Curated Playlists</a></li>
+                <li><a href="#">MuzakMaker</a></li>
+                <li><a href="#">Trending Songs</a></li>
+                <li><a href="#">Your Playlists</a></li>
+                <li><a href="#">Curated Playlists</a></li>
+                <li><a href="user"><img src="images/duke-silver.png" alt="user profile picture"></a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
-		<section>
-			<h2>MuzakMaker</h2>
+		<section id="smoothjazz">
+			<h2>Smooth Jazz</h2>
 			<p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.</p>
 		</section>
 
-		<section>
-			<h2>Trending Songs</h2>
-			<div class="playlist">
-				<img src="images/aloma-cover.png" alt="Aloma">
-				<p>Artist: Cali</p>
-				<audio src="aloma.mp3" controls></audio>
-			</div>
+		<section id="trending">
+            <h2>Trending Songs</h2>
+            <div class="scroll">
+                <section>
+                    <div>
+                    <h3>Aloma</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Cali</dd>
+                        </dl>
+                    </div>
+                    <img src="images/aloma-cover.png" alt="dove on black background">
+                    <audio src="audio/aloma.mp3" controls></audio>
+                </section>
+                <section>
+                    <div>
+                    <h3>My Road</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Nesterouk</dd>
+                        </dl>
+                    </div>
+                    <img src="images/my-road-cover.png" alt="road on desert highway">
+                    <audio src="audio/my-road.mp3" controls></audio>
+                </section>
+                <section>
+                    <div>
+                    <h3>Papaya</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Dredstudio</dd>
+                        </dl>
+                    </div>
+                    <img src="images/papaya-cover.png" alt="papaya">
+                    <audio src="audio/papaya.mp3" controls></audio>
+                </section>
+                <section>
+                    <div>
+                    <h3>Smoothies</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Black Rhomb</dd>
+                        </dl>
+                    </div>
+                    <img src="images/smoothies-cover.png" alt="dove on black background">
+                    <audio src="audio/smoothies.mp3" controls></audio>
+                </section>
+                <section>
+                    <div>
+                    <h3>Successful Performance</h3>
+                        <dl>
+                            <dt>Artist</dt>
+                            <dd>Ricky Bombino</dd>
+                        </dl>
+                    </div>
+                    <img src="images/successful-performance-cover.png" alt="dove on black background">
+                    <audio src="audio/successful-performance.mp3" controls></audio>
+                </section>
+            </div>
+
+                <h2>More trending</h2>
+
 		</section>
 
-		<section>
+		<section id="playlists">
 			<h2>Your Playlists</h2>
 			<div class="playlist">
 				<img src="images/best-of-2020-cover.png" alt="Best of 2020">
@@ -60,7 +119,7 @@
 			</div>
 		</section>
 
-		<section>
+		<section id="curated">
 			<h2>Curated Playlists</h2>
 			<div class="playlist">
 				<img src="images/boozy-brunch-cover.png" alt="Boozy Brunch">
