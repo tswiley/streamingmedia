@@ -101,11 +101,46 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 0;
 }
 
+
+
+@media screen and (max-width: 375px) {
+    #playlists {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+
+    #curated .playlist {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    #curated .playlist li {
+        flex-shrink: 0;
+        width: 100%;
+        white-space: nowrap;
+    }  
+
+    #playlists, #curated {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
+}
+
+
 @media screen and (min-width: 375px){
     body {
         max-width: 834px;
     }
 
+    .hamburger {
+        display: none;
+    }
+    
     #playlists {
         width: 50%;
         float: left;
@@ -144,34 +179,12 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         flex: 1;
     }
 
-}
-
-@media screen and (max-width: 375px) {
-    #playlists {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-      }
-
-    #curated .playlist {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
+    .more {
+        float: right;
+        margin: 10px;
     }
-    #curated .playlist li {
-        flex-shrink: 0;
-        width: 100%;
-        white-space: nowrap;
-    }  
 
-    #playlists, #curated {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-      }
+    
 }
 
 html {
@@ -211,6 +224,20 @@ h2, h3 {
 
 p, dl, dd {
     font-size: 1em;
+}
+
+#playlists h2 {
+    background-color: #ffffff;
+    color: #590242;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+#curated h2 {
+    background-color: #ffffff;
+    color: #590242;
+    padding-left: 30px;
+    padding-bottom: 10px;
 }
 
 .hamburger {
@@ -260,6 +287,10 @@ nav ul {
     padding-bottom: 15px;
 }
 
+#trending .button {
+    background-color: #590242;
+}
+
 #playlists {
     background-color: #2699FB;
 }
@@ -279,9 +310,6 @@ nav ul {
     padding: 5px;
     margin: 20px;
 }
-
-
-
 
 audio::-webkit-media-controls-mute-button {
     background-color: #ffffff;
@@ -328,6 +356,20 @@ audio {
     position: absolute;
     bottom: 150px;
     left: 5px;
+}
+
+.more {
+    background-color: #590242;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 5px;
 }
 
 more {
@@ -384,20 +426,6 @@ more {
 }
 #curated ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
     background-color: #ffffff;
-
-    
-.more {
-    background-color: #590242;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-left: 30px;
-    border-radius: 5px;
 }
 
 footer p {
