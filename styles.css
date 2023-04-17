@@ -101,37 +101,6 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 0;
 }
 
-
-
-@media screen and (max-width: 375px) {
-    #playlists {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-      }
-
-    #curated .playlist {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
-    }
-    #curated .playlist li {
-        flex-shrink: 0;
-        width: 100%;
-        white-space: nowrap;
-    }  
-
-    #playlists, #curated {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-      }
-}
-
-
 @media screen and (min-width: 375px){
     body {
         max-width: 834px;
@@ -182,10 +151,40 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     .more {
         float: right;
         margin: 10px;
+    } 
+}
+
+@media screen and (max-width: 375px) {
+    #playlists {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
     }
 
-    
+    #curated .playlist {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #curated .playlist li {
+        flex-shrink: 0;
+        width: 100%;
+        white-space: nowrap;
+    }  
+
+    #playlists, #curated {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+      }
 }
+
+
+
 
 html {
     background-color: #020659;
@@ -194,8 +193,9 @@ html {
 
 body {
     margin: 0 auto;
-    
     color: #ffffff;
+    display: flex;
+        flex-direction: column;
 }
 
 header {
