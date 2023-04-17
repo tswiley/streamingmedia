@@ -128,8 +128,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         padding: 20px;
     }
 
-    #playlists section,
-    #curated section {
+    #playlists section, #curated section {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -137,8 +136,7 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         margin-bottom: 20px;
     }
 
-    #playlists img,
-    #curated img {
+    #playlists img, #curated img {
         flex: 0 0 30%;
         margin-right: 20px;
     }
@@ -167,7 +165,6 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
         display: flex;
         flex-wrap: nowrap;
         overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
     }
 
     #curated .playlist li {
@@ -183,9 +180,6 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
       }
 }
 
-
-
-
 html {
     background-color: #020659;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -195,7 +189,7 @@ body {
     margin: 0 auto;
     color: #ffffff;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
 }
 
 header {
@@ -428,6 +422,9 @@ more {
     background-color: #ffffff;
 }
 
+footer {
+    position: relative;
+}
 footer p {
     font-size: .75em;
 }
