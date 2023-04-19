@@ -47,178 +47,68 @@ table {
 }
 
 /* Mobile First Code? Check this.....*/
-ul {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-}
-label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
-label span {
-    background-color: #ffffff;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background-color .2s ease-out;
-    width: 18px;
-}
-label span:before, label span:after {
-    background: #ffffff;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-label span:before {
-    top: 5px;
-}
-label span:after {
-    top: -5px;
-}
-input {
-    display: none;
-}
-input:checked ~ ul {
-    max-height: 500px;
-}
-input:checked ~ label span {
-    background: transparent;
-}
-input:checked ~ label span:before {
-    transform: rotate(-45deg);
-}
-input:checked ~ label span:after {
-    transform: rotate(45deg);
-}
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
-    top: 0;
-}
-
-@media screen and (min-width: 375px){
-    body {
-        max-width: 834px;
-    }
-
-    .hamburger {
-        display: none;
-    }
-    
-    #playlists {
-        width: 50%;
-        float: left;
-    }
-      
-    #curated {
-        width: 50%;
-        float: right;
-    }
-
-    #playlists section {
-        padding: 20px;
-    }
-    
-    #curated section {
-        padding: 20px;
-    }
-
-    #playlists section, #curated section {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        margin-bottom: 20px;
-    }
-
-    #playlists img, #curated img {
-        flex: 0 0 30%;
-        margin-right: 20px;
-    }
-
-    #playlists p,
-    #curated p {
-        flex: 1;
-    }
-
-    .more {
-        float: right;
-        margin: 10px;
-    } 
-}
-
-@media screen and (max-width: 375px) {
-    #playlists {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-    }
-
-    #curated .playlist {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-    }
-
-    #curated .playlist li {
-        flex-shrink: 0;
-        width: 100%;
-        white-space: nowrap;
-    }  
-
-    #playlists, #curated {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-      }
-}
-
 html {
     background-color: #020659;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 body {
+    width: 375px;
     margin: 0 auto;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
+    background-color: #ffffff;
 }
-
 header {
     margin-top: 59px;
     padding-bottom: 20px;
     background: rgb(33,4,217);
     background: linear-gradient(90deg, rgba(33,4,217,1) 0%, rgba(2,6,89,1) 33%, rgba(2,6,89,1) 66%, rgba(0,0,0,1) 100%);
 }
+nav {
+    
+}
 
 nav ul {
     background-color: #2104D9;
+    display: none;
 }
 
-h1 {
-    font-size: 1.25em;
+nav ul li a {
+    color: #ffffff;
 }
 
-h1, h2, h3 {
-    font-weight: bold;
-    text-transform: uppercase;
+.hamburger {
+    display: none;
+  }
+  
+  .hamburger-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
 }
 
-h2, h3 {
-    font-size: 1em;
+.hamburger-label::before,
+.hamburger-label::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
 }
 
-p, dl, dd {
-    font-size: 1em;
+.hamburger-label::after {
+    margin-bottom: 0;
 }
+
+.hamburger-label:hover {
+    background-color: #f0f0f0;
+}
+
+.hamburger:checked ~ nav ul {
+    display: block;
+}
+
 
 #playlists h2 {
     background-color: #ffffff;
@@ -234,30 +124,6 @@ p, dl, dd {
     padding-bottom: 10px;
 }
 
-.hamburger {
-    display: none;
-  }
-  
-.hamburger-label {
-    display: inline-block;
-    cursor: pointer;
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-  
-.hamburger-label:hover {
-    background-color: #f0f0f0;
-}
-  
-nav ul {
-    display: none;
-}
-  
-.hamburger:checked ~ nav ul {
-    display: block;
-}  
- 
 #smoothjazz {
     background-image: linear-gradient(to right, #2104D9, black);
     padding-top: 10px;
@@ -271,7 +137,6 @@ nav ul {
 
 #trending {
     color: #590242;
-    background-color: #ffffff;
     padding-top: 50px;
     padding-bottom: 30px;
 }
@@ -338,6 +203,31 @@ audio::-webkit-media-controls-enclosure {
     width: 350px;
 }
 
+h1 {
+    font-size: 1.25em;
+    position: relative;
+    color: #ffffff;
+    
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2, h3 {
+    font-size: 1em;
+}
+
+.container h3 {
+    color: #ffffff;
+}
+
+p, dl, dd {
+    font-size: 1em;
+}
 dl {
     display: flex;
 }
@@ -375,7 +265,7 @@ more {
     width: 150px;
     display: block;
     text-align: center;
-    margin: 10 px 0 30px 32px;
+    margin: 10px 0 30px 32px;
 }
 
 .more:hover {
@@ -427,4 +317,23 @@ footer {
 }
 footer p {
     font-size: .75em;
+}
+
+@media screen and (min-width: 834px) {
+    body {
+        width: 834px;
+    }
+
+    nav {
+        width: 834px;
+    }
+
+    .hamburger-label {
+        display: none;
+      }
+
+    .more {
+        float: right;
+    }
+
 }
